@@ -6,17 +6,21 @@ using UnityEngine.UI;
 public class TravelChoice : MonoBehaviour
 {
     public GameObject TextBox;
-    public GameObject Canvas;
+    public GameObject ChoicePanel;
     public GameObject Choice01;
     public GameObject Choice02;
+    public GameObject continueButton;
     public Text ButtonText1;
     public Text ButtonText2;
     public int ChoiceMade;
+    public GameObject ObjectiveBox;
+    public Text ObjectiveText;
 
 
     public void Start()
     {
-        Canvas.SetActive(false);
+        ChoicePanel.SetActive(false);
+        ObjectiveText.GetComponent<Text>().text = "Figure out how you will get to school";
         ButtonText1.text = "Take your bike to school?";
         ButtonText2.text = "Take the bus to school?";
     }
@@ -24,13 +28,15 @@ public class TravelChoice : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
-            Canvas.SetActive(true);
+            ChoicePanel.SetActive(true);
+        continueButton.SetActive(false);
         TextBox.GetComponent<Text>().text = "How will you get to school today?";
     }
     public void ChoiceOption1 ()
     {
         TextBox.GetComponent<Text>().text = "You decided to to ride your bike to school.";
         ChoiceMade = 1;
+       
     }
     public void ChoiceOption2()
     {
@@ -45,6 +51,7 @@ public class TravelChoice : MonoBehaviour
         {
             Choice01.SetActive(false);
             Choice02.SetActive(false);
+            continueButton.SetActive(true);
         }
     }
 }
