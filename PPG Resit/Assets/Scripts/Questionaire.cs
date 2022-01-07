@@ -22,15 +22,18 @@ public class Questionaire : MonoBehaviour
         ObjectiveText.GetComponent<Text>().text = "Find your class";
         ButtonText1.text = "Yes!";
         ButtonText2.text = "No thanks.";
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
-            ChoicePanel.SetActive(true);
+        ChoicePanel.SetActive(true);
         continueButton.SetActive(false);
         TextBox.GetComponent<Text>().text = "Before you can enter the university you are stopped by a fellow student who approaches you with a question, Would you like to take a survey for the chance to win a free plastic raincoat?";
     }
+
+    //Dialogue Options for the Questionaire Interaction
     public void ChoiceOption1()
     {
         TextBox.GetComponent<Text>().text = "You completed the survey to the besy of your ability even though you could read any of the questions on it.";
@@ -43,12 +46,14 @@ public class Questionaire : MonoBehaviour
         ChoiceMade = 2;
     }
 
+    //Calls this to close dialogue menu
     public void closeMenu()
     {
         ChoicePanel.SetActive(false);
     }
-    // Update is called once per frame
-    void Update()
+
+    // Waits for the player to make a decision to then disable buttons
+    void FixedUpdate()
     {
         if (ChoiceMade >= 1)
         {

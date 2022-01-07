@@ -11,10 +11,13 @@ public class RightDoor : MonoBehaviour
     public GameObject ChoicePanel;
     public GameObject Choice01;
     public GameObject Choice02;
+    public Button contButton;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Button btn = contButton.GetComponent<Button>();
         if (collision.gameObject.name == "Player")
+            btn.onClick.AddListener(changescene);
             ChoicePanel.SetActive(true);
             Choice01.SetActive(false);
             Choice02.SetActive(false);
@@ -22,8 +25,9 @@ public class RightDoor : MonoBehaviour
         TextBox.GetComponent<Text>().text = "You finally found your classroom! Time to attend the lession.";
     }
 
-    private void closeMenu ()
+    public void changescene()
     {
-        ChoicePanel.SetActive(false);
+        Debug.Log("You have found the right door!");
     }
+
 }
