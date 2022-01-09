@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Travel Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Bike Minigame.unity
+    guid: 08627348cb0716947957037b9bad1936
+  - enabled: 1
     path: Assets/Scenes/SchoolScene.unity
     guid: 41deddf5a992f504e968ab862460da30
   - enabled: 1

@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\LevelChanger.cs" />
      <Compile Include="Assets\Scripts\TravelChoice.cs" />
      <Compile Include="Assets\Scripts\Questionaire.cs" />
+     <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
+     <Compile Include="Assets\Scripts\BikeController.cs" />
      <Compile Include="Assets\Scripts\WrongDoor.cs" />
      <Compile Include="Assets\Scripts\ChoiceScript.cs" />
      <Compile Include="Assets\Scripts\Dialogue.cs" />
