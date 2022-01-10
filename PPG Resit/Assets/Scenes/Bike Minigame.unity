@@ -3326,6 +3326,7 @@ GameObject:
   - component: {fileID: 4323723275152728103}
   - component: {fileID: 4323723275152728100}
   - component: {fileID: 4323723275152728101}
+  - component: {fileID: 4323723275152728124}
   m_Layer: 5
   m_Name: LevelChanger
   m_TagString: Untagged
@@ -3333,3 +3334,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4323723275152728124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323723275152728123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1daabee5db472e6498b345757f195c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4323723275152728101}

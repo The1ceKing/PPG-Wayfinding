@@ -114,8 +114,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 29.966667
-    functionName: OnFadeComplete
+  - time: 1.1
+    functionName: NextScene
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 1daabee5db472e6498b345757f195c5e, type: 3}
     floatParameter: 0
