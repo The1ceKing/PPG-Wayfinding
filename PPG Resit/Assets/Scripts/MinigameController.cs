@@ -14,7 +14,7 @@ public class MinigameController : MonoBehaviour
     public Animator animator;
     public Animation anim;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,13 +22,14 @@ public class MinigameController : MonoBehaviour
         anim = GetComponent<Animation>();
     }
 
-    // Update is called once per frame
+//Movement controls and speed of the player
     void Update()
     {
         float moveDirection = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveDirection * moveSpeed, 0);
     }
 
+    //Checking if the player hit any obstacles
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Obstacle"))
@@ -38,6 +39,7 @@ public class MinigameController : MonoBehaviour
         }
     }
 
+    //Function I connected to a button to the game over screen to reset the mini-game.
     public void ResetGame()
     {
         SceneManager.LoadScene("Bike Minigame");

@@ -1,0 +1,4 @@
+C:\Users\Devon\Documents\GitHub\PPG-Wayfinding\PPG Resit\obj\Debug\UnityEngine.UI.Player.csproj.AssemblyReference.cache
+C:\Users\Devon\Documents\GitHub\PPG-Wayfinding\PPG Resit\obj\Debug\UnityEngine.UI.Player.csproj.CoreCompileInputs.cache
+C:\Users\Devon\Documents\GitHub\PPG-Wayfinding\PPG Resit\obj\Debug\UnityEngine.UI.dll
+C:\Users\Devon\Documents\GitHub\PPG-Wayfinding\PPG Resit\obj\Debug\UnityEngine.UI.pdb

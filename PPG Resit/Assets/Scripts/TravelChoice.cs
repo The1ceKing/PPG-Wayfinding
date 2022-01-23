@@ -7,12 +7,9 @@ public class TravelChoice : MonoBehaviour
 {
     public GameObject TextBox;
     public GameObject ChoicePanel;
-    public GameObject Choice01;
     public GameObject Choice02;
-    public GameObject continueButton;
     public Text ButtonText1;
     public Text ButtonText2;
-    public int ChoiceMade;
     public GameObject ObjectiveBox;
     public Text ObjectiveText;
 
@@ -20,38 +17,24 @@ public class TravelChoice : MonoBehaviour
     public void Start()
     {
         ChoicePanel.SetActive(false);
-        ObjectiveText.GetComponent<Text>().text = "Figure out how you will get to school";
-        ButtonText1.text = "Take your bike to school?";
-        ButtonText2.text = "Take the bus to school?";
+        ObjectiveText.GetComponent<Text>().text = "Decide how you will get to class.";
+        ButtonText1.text = "Yes";
+        ButtonText2.text = "No";
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.name == "Player")
+        if (other.gameObject.name == "Player")
             ChoicePanel.SetActive(true);
-        continueButton.SetActive(false);
-        TextBox.GetComponent<Text>().text = "How will you get to school today?";
+        TextBox.GetComponent<Text>().text = "Should I take my bike to school?";
     }
-    public void ChoiceOption1 ()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        TextBox.GetComponent<Text>().text = "You decided to to ride your bike to school.";
-        ChoiceMade = 1;
-       
+        if (other.gameObject.name == "Player")
+            ChoicePanel.SetActive(false);
     }
     public void ChoiceOption2()
     {
-        TextBox.GetComponent<Text>().text = "You decided to take the bus to school";
-        ChoiceMade = 2;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (ChoiceMade >= 1)
-        {
-            Choice01.SetActive(false);
-            Choice02.SetActive(false);
-            continueButton.SetActive(true);
-        }
+        ChoicePanel.SetActive(false);
     }
 }
