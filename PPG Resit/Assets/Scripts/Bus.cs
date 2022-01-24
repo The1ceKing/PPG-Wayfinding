@@ -12,8 +12,7 @@ public class Bus : MonoBehaviour
 {
     private int BusTime;
     public TextMeshProUGUI buscomingTime;
-
-    private bool busHasStopped = false;
+    
     public BoxCollider2D busBox;
     
     public GameObject ChoicePanel;

@@ -529,6 +529,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386884423}
   m_CullTransparentMesh: 1
+--- !u!1 &390272130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390272132}
+  - component: {fileID: 390272131}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &390272131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390272130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a86dc7c23febcc42af25890635dac50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRaining: 0
+  rainMultiplier: 0
+--- !u!4 &390272132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390272130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1167.6152, y: 662.29376, z: -244.26631}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598621241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,6 +3465,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: ef3268f478522cc448db51b34e5c689f, type: 3}
   currentWeather: {fileID: 1702997792}
   rainOrShine: 0
+  isRaining: 0
 --- !u!1 &2005328925
 GameObject:
   m_ObjectHideFlags: 0

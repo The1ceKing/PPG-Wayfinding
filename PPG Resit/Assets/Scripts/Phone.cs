@@ -11,7 +11,8 @@ public class Phone : MonoBehaviour
     public Texture[] weatherStatus = new Texture[0];
     public RawImage currentWeather;
     public int rainOrShine;
-    
+    public bool isRaining;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,12 +21,11 @@ public class Phone : MonoBehaviour
         if (rainOrShine == 1)
         {
             currentWeather.texture = weatherStatus[0];
-            Debug.Log("Rain");
+            isRaining = true;
         }
         else
         {
             currentWeather.texture = weatherStatus[1];
-            Debug.Log("Sun");
         }
         
     }
