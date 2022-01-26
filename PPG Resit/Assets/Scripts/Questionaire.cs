@@ -9,7 +9,6 @@ public class Questionaire : MonoBehaviour
     public GameObject ChoicePanel;
     public GameObject Choice01;
     public GameObject Choice02;
-    public GameObject continueButton;
     public Text ButtonText1;
     public Text ButtonText2;
     public int ChoiceMade;
@@ -29,14 +28,13 @@ public class Questionaire : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         ChoicePanel.SetActive(true);
-        continueButton.SetActive(false);
         TextBox.GetComponent<Text>().text = "Before you can enter the university you are stopped by a fellow student who approaches you with a question, Would you like to take a survey for the chance to win a free plastic raincoat?";
     }
 
     //Dialogue Options for the Questionaire Interaction
     public void ChoiceOption1()
     {
-        TextBox.GetComponent<Text>().text = "You completed the survey to the besy of your ability even though you could read any of the questions on it.";
+        TextBox.GetComponent<Text>().text = "You completed the survey to the best of your ability even though you could read any of the questions on it.";
         ChoiceMade = 1;
 
     }
@@ -55,11 +53,15 @@ public class Questionaire : MonoBehaviour
     // Waits for the player to make a decision to then disable buttons
     void FixedUpdate()
     {
-        if (ChoiceMade >= 1)
+        if (ChoiceMade == 1)
         {
-            Choice01.SetActive(false);
-            Choice02.SetActive(false);
-            continueButton.SetActive(true);
+            TextBox.GetComponent<Text>().text = " Dutch is formed from how many different languages";
+            ButtonText1.text = "german, english and french!";
+            ButtonText2.text = "german, english and russian.";
+        }
+        else if (ChoiceMade == 2)
+        {
+            
         }
     }
 }
